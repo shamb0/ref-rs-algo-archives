@@ -1,0 +1,20 @@
+[workspace]
+members = [
+    "examples/v1_recursive",
+    "examples/v2_iterative",
+]
+
+[package]
+name = "balance-change-detection"
+version = "0.1.0"
+edition = "2021"
+
+[[bench]]
+name = "balance_change_benchmark"
+harness = false
+
+[dev-dependencies]
+criterion = "0.3"
+rand = "0.8"
+v1_recursive = { path = "examples/v1_recursive" }
+v2_iterative = { path = "examples/v2_iterative" }
